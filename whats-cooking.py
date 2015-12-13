@@ -31,17 +31,18 @@ def create_csc_sparse_ing():
     relevant_cols = whats_cooking.iloc[:, 3:].astype(int)
 
     coo_sparse_ing = sparse.coo_matrix(relevant_cols)
-    csc_sparse_ing = coo_sparse_ing.tocsc()
+    csr_sparse_ing = coo_sparse_ing.tocsr()
 
-    spio.mmwrite("csc_sparse_ing.mtx", csc_sparse_ing)
-    return csc_sparse_ing
+    spio.mmwrite("csr_sparse_ing.mtx", csr_sparse_ing)
+    return csr_sparse_ing
 
 
 def main():
     try:
-        csc_sparse_ing = spio.mmread("csc_sparse_ing.mtx")
+        csr_sparse_ing = spio.mmread("csr_sparse_ing.mtx")
     except IOError:
-        csc_sparse_ing = create_csc_sparse_ing()
+        csr_sparse_ing = create_csc_sparse_ing()
+
 
 if __name__ == '__main__':
     main()
