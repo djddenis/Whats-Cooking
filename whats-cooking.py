@@ -3,6 +3,7 @@ import pandas as pd
 from scipy import sparse
 from scipy import io as spio
 import sklearn.linear_model as sklm
+import sklearn.cross_validation as skcv
 
 __author__ = 'Devin Denis'
 
@@ -57,6 +58,11 @@ def main():
 
     map_cuisines_to_nums(cuisine_mapping)
 
+    alg = sklm.LogisticRegression(multi_class='ovr')
+
+    scores = skcv.cross_val_score(alg, csr_sparse_ing, whats_cooking["cuisine"].astype(int), cv=3)
+
+    print scores.mean()
 
 if __name__ == '__main__':
     main()
