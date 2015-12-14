@@ -37,11 +37,25 @@ def create_csc_sparse_ing():
     return csr_sparse_ing
 
 
+def get_cuisine_int_mapping():
+    cuisines = whats_cooking["cuisine"].unique()
+    return {cuis: num + 1 for num, cuis in enumerate(cuisines)}
+
+
+def map_cuisines_to_nums(cuisine_mapping):
+    for key, val in cuisine_mapping.items():
+        whats_cooking.loc[whats_cooking["cuisine"] == key, 'cuisine'] = val
+
+
 def main():
     try:
         csr_sparse_ing = spio.mmread("csr_sparse_ing.mtx")
     except IOError:
         csr_sparse_ing = create_csc_sparse_ing()
+
+    cuisine_mapping = get_cuisine_int_mapping()  # Keep the mapping so we can reconstruct them later if we want
+
+    map_cuisines_to_nums(cuisine_mapping)
 
 
 if __name__ == '__main__':
