@@ -31,7 +31,7 @@ def get_ingredient_bool_columns():
     return basic_dummies.sum(level=0)  # Unfolds multi level index to single level (how?)
 
 
-def create_csc_sparse_ing():
+def create_csr_sparse_ing():
     ing_cols = get_ingredient_bool_columns()
 
     ing_cols[ing_cols > 1] = 1  # Fix recipes with duplicate ingredients having values >1 for those ingredients
@@ -57,7 +57,7 @@ def main():
     try:
         csr_sparse_ing = spio.mmread("csr_sparse_ing.mtx")
     except IOError:
-        csr_sparse_ing = create_csc_sparse_ing()
+        csr_sparse_ing = create_csr_sparse_ing()
 
     cuisine_mapping = get_cuisine_int_mapping()  # Keep the mapping so we can reconstruct them later if we want
 
