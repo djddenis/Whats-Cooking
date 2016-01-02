@@ -57,7 +57,9 @@
 {\pntext\f1\'B7\tab}I may have found  the wrong recipies the last time.  I had been using argmax() and doing some math to calculate the relevant rows.  This time I did "(ing_col == 2).any(axis=1)" and used that as a row index.    Maybe I made a math error last time?  In particular, I think this is right because it gives a much more sensible answer.  I find only one row that has 2 valued cell(s), and it does have duplicate ingredients.  Going to check if I get similar results on a bigger portion of the data, and if I do, I'll just set everything greater than 1 to 1.\par
 {\pntext\f1\'B7\tab}Also, apparently the matrix classes in numpy are sort of deprecated in favour of ndarrays?  I can see how having both is kind of annoying.  I need the sparse matrices, but I'll favor ndarrays over the regular ones.\par
 {\pntext\f1\'B7\tab}So searching the whole data set, there are five recipies that show up as having values other than 0 or 1, and they all have duplicate ingredients.  So that answers that question.  As I said before, I'll just set everything above 1 to 1.\par
-{\pntext\f1\'B7\tab}\par
+{\pntext\f1\'B7\tab}Unsurprisingly, correcting the values for the five recipies that had duplicates didn't really change the accuracy significantly.  Still at ~70%.\par
+{\pntext\f1\'B7\tab}So, I definitely want to try a decision tree based approach here.  We've got enough data to mitigate some of the overfitting issues, and I think it makes sense with the boolean data.  Also, I feel like distinguishing recipies not just ingredient by ingredient but  by groups of ingredients together might be more effective.  For example, maybe ginger = pretty much anything asian, garlic = anything eurasian, but ginger + garlic together = specifically chinese.  (Lack of linear separability?)\par
+{\pntext\f1\'B7\tab}Going to start with a random forest.  Going to set the max depth to 5 (how many recipies have more than 5 distinguishing ingredients?)  I'll start a small number of trees looking at the standard sqrt(num_features) things in case time to train is too much, and work the number up over a few runs if I can.\par
 
 \pard\sa200\sl276\slmult1\par
 }

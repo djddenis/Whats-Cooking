@@ -3,6 +3,7 @@ import pandas as pd
 from scipy import sparse
 from scipy import io as spio
 import sklearn.linear_model as sklm
+import sklearn.ensemble as sken
 import sklearn.cross_validation as skcv
 
 __author__ = 'Devin Denis'
@@ -65,8 +66,8 @@ def main():
     y_true = whats_cooking["cuisine"].astype(int)
     # x_dense = csr_sparse_ing.todense()
 
-    # alg = sklm.Lasso()
-    alg = sklm.LogisticRegression(penalty='l1', C=0.1, fit_intercept=False, multi_class='ovr')
+    # alg = sklm.LogisticRegression(penalty='l1', C=0.1, fit_intercept=False, multi_class='ovr')
+    alg = sken.RandomForestClassifier(n_estimators=10, max_depth=5, max_features="sqrt", n_jobs=4)
 
     alg.fit(csr_sparse_ing, y_true)
 
