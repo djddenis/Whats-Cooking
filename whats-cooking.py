@@ -81,7 +81,7 @@ def main():
     y_true = whats_cooking["cuisine"].astype(int)
 
     # alg = sklm.LogisticRegression(penalty='l1', C=0.1, fit_intercept=False, multi_class='ovr')
-    alg = sken.RandomForestClassifier(n_estimators=10, max_depth=5, max_features="sqrt", n_jobs=4)
+    alg = sken.RandomForestClassifier(n_estimators=50, max_depth=20, max_features="sqrt", n_jobs=4)
 
     alg.fit(csr_sparse_ing, y_true)
     # alg.fit(csr_filtered_ing, y_true)
