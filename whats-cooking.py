@@ -43,6 +43,16 @@ def create_csr_sparse_ing():
     return csr_sparse_ing
 
 
+def create_filtered_csr_ing(csr_sparse_ing):
+    x_dense = csr_sparse_ing.todense()
+    x_filtered = x_dense[:, x_dense.sum(axis=0).A1 < 10]
+    coo_filtered = sparse.coo_matrix(x_filtered)
+    csr_filtered = coo_filtered.tocsr()
+
+    spio.mmwrite("csr_filtered_ing.mtx", csr_filtered)
+    return csr_filtered
+
+
 def get_cuisine_int_mapping():
     cuisines = whats_cooking["cuisine"].unique()
     return {cuis: num + 1 for num, cuis in enumerate(cuisines)}
@@ -59,19 +69,25 @@ def main():
     except IOError:
         csr_sparse_ing = create_csr_sparse_ing()
 
+    try:
+        csr_filtered_ing = spio.mmread("csr_filtered_ing.mtx")
+    except IOError:
+        csr_filtered_ing = create_filtered_csr_ing(csr_sparse_ing)
+
     cuisine_mapping = get_cuisine_int_mapping()  # Keep the mapping so we can reconstruct them later if we want
 
     map_cuisines_to_nums(cuisine_mapping)
 
     y_true = whats_cooking["cuisine"].astype(int)
-    # x_dense = csr_sparse_ing.todense()
 
     # alg = sklm.LogisticRegression(penalty='l1', C=0.1, fit_intercept=False, multi_class='ovr')
     alg = sken.RandomForestClassifier(n_estimators=10, max_depth=5, max_features="sqrt", n_jobs=4)
 
     alg.fit(csr_sparse_ing, y_true)
+    # alg.fit(csr_filtered_ing, y_true)
 
     scores = skcv.cross_val_score(alg, csr_sparse_ing, y_true, cv=10)
+    # scores = skcv.cross_val_score(alg, csr_filtered_ing, y_true, cv=10)
 
     print scores.mean()
 
