@@ -13,6 +13,7 @@ whats_cooking = pd.read_json(f)
 # To speed up testing
 # whats_cooking = whats_cooking.iloc[0:5000, :]
 
+
 def get_all_ingredients():
     all_ingredients = set()
     for recipe_ingredients in whats_cooking["ingredients"]:
@@ -31,6 +32,8 @@ def get_ingredient_bool_columns():
 
 def create_csc_sparse_ing():
     ing_cols = get_ingredient_bool_columns()
+
+    ing_cols[ing_cols > 1] = 1  # Fix recipes with duplicate ingredients having values >1 for those ingredients
 
     coo_sparse_ing = sparse.coo_matrix(ing_cols)
     csr_sparse_ing = coo_sparse_ing.tocsr()
@@ -61,7 +64,6 @@ def main():
 
     y_true = whats_cooking["cuisine"].astype(int)
     # x_dense = csr_sparse_ing.todense()
-
 
     # alg = sklm.Lasso()
     alg = sklm.LogisticRegression(penalty='l1', C=0.1, fit_intercept=False, multi_class='ovr')

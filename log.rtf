@@ -51,6 +51,14 @@
 {\pntext\f1\'B7\tab}Running logisitic regression on 5000 entries gives me a ~50% correct prediction rate averaged over 3 cross validation folds.  Which is pretty exciting!  Actually better than random prediction!  Still a bit worried about the columns which have a value of 2, but I'm going to put a pin in that and come back to investigate later.\par
 {\pntext\f1\'B7\tab}Also, it still works when doing a load instead of creating columns normally.  Which is excellent!\par
 
+\pard\sa200\sl276\slmult1\b 2/1/2015\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 So running on the full data set with 10 cross validation folds gives me ~70% correct prediction.  Not entirely terrible, but I'm pretty sure I can do better.  First thing's first- I'm going to look into the issue with some cells getting values other than 0 or 1.  Hopefully I'll be able to figure out what's going on there.  And even if I can't, it's still likely a good idea to reduce all the 2s to 1s.\par
+{\pntext\f1\'B7\tab}I may have found  the wrong recipies the last time.  I had been using argmax() and doing some math to calculate the relevant rows.  This time I did "(ing_col == 2).any(axis=1)" and used that as a row index.    Maybe I made a math error last time?  In particular, I think this is right because it gives a much more sensible answer.  I find only one row that has 2 valued cell(s), and it does have duplicate ingredients.  Going to check if I get similar results on a bigger portion of the data, and if I do, I'll just set everything greater than 1 to 1.\par
+{\pntext\f1\'B7\tab}Also, apparently the matrix classes in numpy are sort of deprecated in favour of ndarrays?  I can see how having both is kind of annoying.  I need the sparse matrices, but I'll favor ndarrays over the regular ones.\par
+{\pntext\f1\'B7\tab}So searching the whole data set, there are five recipies that show up as having values other than 0 or 1, and they all have duplicate ingredients.  So that answers that question.  As I said before, I'll just set everything above 1 to 1.\par
+{\pntext\f1\'B7\tab}\par
+
 \pard\sa200\sl276\slmult1\par
 }
  
