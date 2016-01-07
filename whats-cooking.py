@@ -45,7 +45,7 @@ def create_csr_sparse_ing():
 
 def create_filtered_csr_ing(csr_sparse_ing):
     x_dense = csr_sparse_ing.todense()
-    x_filtered = x_dense[:, x_dense.sum(axis=0).A1 < 10]
+    x_filtered = x_dense[:, x_dense.sum(axis=0).A1 < 3]
     coo_filtered = sparse.coo_matrix(x_filtered)
     csr_filtered = coo_filtered.tocsr()
 
@@ -61,6 +61,13 @@ def get_cuisine_int_mapping():
 def map_cuisines_to_nums(cuisine_mapping):
     for key, val in cuisine_mapping.items():
         whats_cooking.loc[whats_cooking["cuisine"] == key, 'cuisine'] = val
+
+
+def run_alg(data, y_true, alg):
+
+    alg.fit(data, y_true)
+    scores = skcv.cross_val_score(alg, data, y_true, cv=5)
+    print scores.mean()
 
 
 def main():
@@ -80,16 +87,11 @@ def main():
 
     y_true = whats_cooking["cuisine"].astype(int)
 
-    # alg = sklm.LogisticRegression(penalty='l1', C=0.1, fit_intercept=False, multi_class='ovr')
-    alg = sken.RandomForestClassifier(n_estimators=50, max_depth=20, max_features="sqrt", n_jobs=4)
+    log_reg = sklm.LogisticRegression(penalty='l1', C=0.1, fit_intercept=False, multi_class='ovr')
+    rand_for = sken.RandomForestClassifier(n_estimators=250, max_depth=10,
+                                           max_features=(np.sqrt(whats_cooking.shape[0])*2), n_jobs=-1)
 
-    alg.fit(csr_sparse_ing, y_true)
-    # alg.fit(csr_filtered_ing, y_true)
-
-    scores = skcv.cross_val_score(alg, csr_sparse_ing, y_true, cv=10)
-    # scores = skcv.cross_val_score(alg, csr_filtered_ing, y_true, cv=10)
-
-    print scores.mean()
+    run_alg(csr_filtered_ing, y_true, log_reg)
 
 if __name__ == '__main__':
     main()
