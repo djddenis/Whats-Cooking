@@ -45,7 +45,7 @@ def create_csr_sparse_ing():
 
 def create_filtered_csr_ing(csr_sparse_ing):
     x_dense = csr_sparse_ing.todense()
-    x_filtered = x_dense[:, x_dense.sum(axis=0).A1 < 3]
+    x_filtered = x_dense[:, x_dense.sum(axis=0).A1 > 5]
     coo_filtered = sparse.coo_matrix(x_filtered)
     csr_filtered = coo_filtered.tocsr()
 
@@ -89,9 +89,9 @@ def main():
 
     log_reg = sklm.LogisticRegression(penalty='l1', C=0.1, fit_intercept=False, multi_class='ovr')
     rand_for = sken.RandomForestClassifier(n_estimators=250, max_depth=10,
-                                           max_features=(np.sqrt(whats_cooking.shape[0])*2), n_jobs=-1)
+                                           max_features='sqrt', n_jobs=-1)
 
-    run_alg(csr_filtered_ing, y_true, log_reg)
+    run_alg(csr_filtered_ing, y_true, rand_for)
 
 if __name__ == '__main__':
     main()
