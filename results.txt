@@ -1,0 +1,12 @@
+Matrix:0
+logistic regression
+0.1, l1, 
+Score:0.697743392515
+Matrix:0
+logistic regression
+0.1, l2, 
+Score:0.74204370104
+Matrix:0
+logistic regression
+0.5, l1, 
+Score:0.761503317969

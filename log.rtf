@@ -80,6 +80,8 @@
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Wait, shouldn't cross validation prevent the issue I described in my last entry?  Also, woops, forgot to commit before several days of laziness.\par
 {\pntext\f1\'B7\tab}So I want to figure out what's going wrong with my filtering stuff.  Both random forest and logistic regression perform extremely poorly on the filtered set.  Logisitic has a 2% correct prediction rate, which seems unlikely to happen unless something is screwed up during the filtering.  Maybe this time I'll be able to figure out what's up with it.\par
 {\pntext\f1\'B7\tab}Ooooooooh...  fuck.  Had my conditional backwards, was filtering out everything that appeared in more than x recipies, not less.  Woops.\par
+{\pntext\f1\'B7\tab}So filtering at > 5, trees at 250, max depth at 10 gives me ~45% accuracy.  Not really an improvement over any earlier tree runs, but the parameters are a bit weird (and with filtering it'd probably generalize better.  What I really want to do is set this thing up to do a bunch of runs, varying the parameters each time.  \par
+{\pntext\f1\'B7\tab}Did just that.  There were a lot of parameters.  It'll probably take all night to run.\par
 
 \pard\sa200\sl276\slmult1\par
 }
