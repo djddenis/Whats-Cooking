@@ -9,4 +9,740 @@ Score:0.74204370104
 Matrix:0
 logistic regression
 0.5, l1, 
-Score:0.761503317969
+Score:0.761603890027
+Matrix:0
+logistic regression
+0.5, l2, 
+Score:0.772439919373
+Matrix:0
+logistic regression
+1.0, l1, 
+Score:0.771006933689
+Matrix:0
+logistic regression
+1.0, l2, 
+Score:0.778197683623
+Matrix:0
+logistic regression
+2.0, l1, 
+Score:0.773320798727
+Matrix:0
+logistic regression
+2.0, l2, 
+Score:0.778776106821
+Matrix:0
+random forest
+25, 5, 
+Score:0.351390595342
+Matrix:0
+random forest
+25, 10, 
+Score:0.42934883778
+Matrix:0
+random forest
+25, 20, 
+Score:0.521797681095
+Matrix:0
+random forest
+100, 5, 
+Score:0.350806544387
+Matrix:0
+random forest
+100, 10, 
+Score:0.441343893715
+Matrix:0
+random forest
+100, 20, 
+Score:0.522375941248
+Matrix:0
+random forest
+200, 5, 
+Score:0.355458614933
+Matrix:0
+random forest
+200, 10, 
+Score:0.441696047423
+Matrix:0
+random forest
+200, 20, 
+Score:0.523584350889
+Matrix:1
+logistic regression
+0.1, l1, 
+Score:0.697743392515
+Matrix:1
+logistic regression
+0.1, l2, 
+Score:0.741867638329
+Matrix:1
+logistic regression
+0.5, l1, 
+Score:0.76162902197
+Matrix:1
+logistic regression
+0.5, l2, 
+Score:0.772515356214
+Matrix:1
+logistic regression
+1.0, l1, 
+Score:0.77078070817
+Matrix:1
+logistic regression
+1.0, l2, 
+Score:0.777870775449
+Matrix:1
+logistic regression
+2.0, l1, 
+Score:0.772742671924
+Matrix:1
+logistic regression
+2.0, l2, 
+Score:0.778449315665
+Matrix:1
+random forest
+25, 5, 
+Score:0.354904675312
+Matrix:1
+random forest
+25, 10, 
+Score:0.432444161587
+Matrix:1
+random forest
+25, 20, 
+Score:0.52262871022
+Matrix:1
+random forest
+100, 5, 
+Score:0.3643320544
+Matrix:1
+random forest
+100, 10, 
+Score:0.4427257707
+Matrix:1
+random forest
+100, 20, 
+Score:0.525317346136
+Matrix:1
+random forest
+200, 5, 
+Score:0.36289834051
+Matrix:1
+random forest
+200, 10, 
+Score:0.444712300758
+Matrix:1
+random forest
+200, 20, 
+Score:0.528511894118
+Matrix:2
+logistic regression
+0.1, l1, 
+Score:0.697718238446
+Matrix:2
+logistic regression
+0.1, l2, 
+Score:0.741716843516
+Matrix:2
+logistic regression
+0.5, l1, 
+Score:0.761553622959
+Matrix:2
+logistic regression
+0.5, l2, 
+Score:0.772188530248
+Matrix:2
+logistic regression
+1.0, l1, 
+Score:0.771158085644
+Matrix:2
+logistic regression
+1.0, l2, 
+Score:0.777393028146
+Matrix:2
+logistic regression
+2.0, l1, 
+Score:0.772315112679
+Matrix:2
+logistic regression
+2.0, l2, 
+Score:0.777846022233
+Matrix:2
+random forest
+25, 5, 
+Score:0.359156564125
+Matrix:2
+random forest
+25, 10, 
+Score:0.436114659734
+Matrix:2
+random forest
+25, 20, 
+Score:0.524263956754
+Matrix:2
+random forest
+100, 5, 
+Score:0.361823294246
+Matrix:2
+random forest
+100, 10, 
+Score:0.446371588351
+Matrix:2
+random forest
+100, 20, 
+Score:0.529115478243
+Matrix:2
+random forest
+200, 5, 
+Score:0.364235050287
+Matrix:2
+random forest
+200, 10, 
+Score:0.444988679823
+Matrix:2
+random forest
+200, 20, 
+Score:0.531225881997
+Matrix:3
+logistic regression
+0.1, l1, 
+Score:0.697718238446
+Matrix:3
+logistic regression
+0.1, l2, 
+Score:0.741465394401
+Matrix:3
+logistic regression
+0.5, l1, 
+Score:0.761553585037
+Matrix:3
+logistic regression
+0.5, l2, 
+Score:0.771459469984
+Matrix:3
+logistic regression
+1.0, l1, 
+Score:0.771057418751
+Matrix:3
+logistic regression
+1.0, l2, 
+Score:0.776890288194
+Matrix:3
+logistic regression
+2.0, l1, 
+Score:0.772240127798
+Matrix:3
+logistic regression
+2.0, l2, 
+Score:0.7766393663
+Matrix:3
+random forest
+25, 5, 
+Score:0.353770879401
+Matrix:3
+random forest
+25, 10, 
+Score:0.440159143529
+Matrix:3
+random forest
+25, 20, 
+Score:0.523937821564
+Matrix:3
+random forest
+100, 5, 
+Score:0.365410373207
+Matrix:3
+random forest
+100, 10, 
+Score:0.44805783796
+Matrix:3
+random forest
+100, 20, 
+Score:0.530271883923
+Matrix:3
+random forest
+200, 5, 
+Score:0.365213959013
+Matrix:3
+random forest
+200, 10, 
+Score:0.449213379089
+Matrix:3
+random forest
+200, 20, 
+Score:0.531302849306
+Matrix:4
+logistic regression
+0.1, l1, 
+Score:0.697718238446
+Matrix:4
+logistic regression
+0.1, l2, 
+Score:0.741188895587
+Matrix:4
+logistic regression
+0.5, l1, 
+Score:0.761553762132
+Matrix:4
+logistic regression
+0.5, l2, 
+Score:0.771459428735
+Matrix:4
+logistic regression
+1.0, l1, 
+Score:0.77085650204
+Matrix:4
+logistic regression
+1.0, l2, 
+Score:0.776412559648
+Matrix:4
+logistic regression
+2.0, l1, 
+Score:0.772164497794
+Matrix:4
+logistic regression
+2.0, l2, 
+Score:0.776010694342
+Matrix:4
+random forest
+25, 5, 
+Score:0.36046060227
+Matrix:4
+random forest
+25, 10, 
+Score:0.44112017742
+Matrix:4
+random forest
+25, 20, 
+Score:0.526347679973
+Matrix:4
+random forest
+100, 5, 
+Score:0.368483553906
+Matrix:4
+random forest
+100, 10, 
+Score:0.450345197997
+Matrix:4
+random forest
+100, 20, 
+Score:0.531981490998
+Matrix:4
+random forest
+200, 5, 
+Score:0.367779586813
+Matrix:4
+random forest
+200, 10, 
+Score:0.44898732749
+Matrix:4
+random forest
+200, 20, 
+Score:0.53062419532
+Matrix:5
+logistic regression
+0.1, l1, 
+Score:0.697718238446
+Matrix:5
+logistic regression
+0.1, l2, 
+Score:0.74096272071
+Matrix:5
+logistic regression
+0.5, l1, 
+Score:0.761327479696
+Matrix:5
+logistic regression
+0.5, l2, 
+Score:0.770428468838
+Matrix:5
+logistic regression
+1.0, l1, 
+Score:0.770077082681
+Matrix:5
+logistic regression
+1.0, l2, 
+Score:0.775431695929
+Matrix:5
+logistic regression
+2.0, l1, 
+Score:0.771636710977
+Matrix:5
+logistic regression
+2.0, l2, 
+Score:0.775306958658
+Matrix:5
+random forest
+25, 5, 
+Score:0.35968696195
+Matrix:5
+random forest
+25, 10, 
+Score:0.445437639598
+Matrix:5
+random forest
+25, 20, 
+Score:0.526827186759
+Matrix:5
+random forest
+100, 5, 
+Score:0.373236800148
+Matrix:5
+random forest
+100, 10, 
+Score:0.45069772218
+Matrix:5
+random forest
+100, 20, 
+Score:0.534094600784
+Matrix:5
+random forest
+200, 5, 
+Score:0.371122541473
+Matrix:5
+random forest
+200, 10, 
+Score:0.452380760055
+Matrix:5
+random forest
+200, 20, 
+Score:0.53273519599
+Matrix:6
+logistic regression
+0.1, l1, 
+Score:0.697743392515
+Matrix:6
+logistic regression
+0.1, l2, 
+Score:0.741063273763
+Matrix:6
+logistic regression
+0.5, l1, 
+Score:0.761075976825
+Matrix:6
+logistic regression
+0.5, l2, 
+Score:0.770000975983
+Matrix:6
+logistic regression
+1.0, l1, 
+Score:0.769423443626
+Matrix:6
+logistic regression
+1.0, l2, 
+Score:0.774928794629
+Matrix:6
+logistic regression
+2.0, l1, 
+Score:0.770907407465
+Matrix:6
+logistic regression
+2.0, l2, 
+Score:0.77475373322
+Matrix:6
+random forest
+25, 5, 
+Score:0.362100550125
+Matrix:6
+random forest
+25, 10, 
+Score:0.445015677046
+Matrix:6
+random forest
+25, 20, 
+Score:0.530348229917
+Matrix:6
+random forest
+100, 5, 
+Score:0.371321790909
+Matrix:6
+random forest
+100, 10, 
+Score:0.448510338449
+Matrix:6
+random forest
+100, 20, 
+Score:0.531552850486
+Matrix:6
+random forest
+200, 5, 
+Score:0.37449178679
+Matrix:6
+random forest
+200, 10, 
+Score:0.451803470926
+Matrix:6
+random forest
+200, 20, 
+Score:0.531679951401
+Matrix:7
+logistic regression
+0.1, l1, 
+Score:0.697718238446
+Matrix:7
+logistic regression
+0.1, l2, 
+Score:0.74088729005
+Matrix:7
+logistic regression
+0.5, l1, 
+Score:0.760748976924
+Matrix:7
+logistic regression
+0.5, l2, 
+Score:0.769523320204
+Matrix:7
+logistic regression
+1.0, l1, 
+Score:0.768945863648
+Matrix:7
+logistic regression
+1.0, l2, 
+Score:0.774451075557
+Matrix:7
+logistic regression
+2.0, l1, 
+Score:0.770429331467
+Matrix:7
+logistic regression
+2.0, l2, 
+Score:0.773948989328
+Matrix:7
+random forest
+25, 5, 
+Score:0.365163123809
+Matrix:7
+random forest
+25, 10, 
+Score:0.437299452675
+Matrix:7
+random forest
+25, 20, 
+Score:0.526325031871
+Matrix:7
+random forest
+100, 5, 
+Score:0.37745786077
+Matrix:7
+random forest
+100, 10, 
+Score:0.450319660792
+Matrix:7
+random forest
+100, 20, 
+Score:0.533037686993
+Matrix:7
+random forest
+200, 5, 
+Score:0.374494225678
+Matrix:7
+random forest
+200, 10, 
+Score:0.450872489231
+Matrix:7
+random forest
+200, 20, 
+Score:0.533916704672
+Matrix:8
+logistic regression
+0.1, l1, 
+Score:0.697718238446
+Matrix:8
+logistic regression
+0.1, l2, 
+Score:0.740384281361
+Matrix:8
+logistic regression
+0.5, l1, 
+Score:0.7599193793
+Matrix:8
+logistic regression
+0.5, l2, 
+Score:0.768040010671
+Matrix:8
+logistic regression
+1.0, l1, 
+Score:0.767512890705
+Matrix:8
+logistic regression
+1.0, l2, 
+Score:0.773370202711
+Matrix:8
+logistic regression
+2.0, l1, 
+Score:0.768895969838
+Matrix:8
+logistic regression
+2.0, l2, 
+Score:0.773144324654
+Matrix:8
+random forest
+25, 5, 
+Score:0.367577967623
+Matrix:8
+random forest
+25, 10, 
+Score:0.446796891955
+Matrix:8
+random forest
+25, 20, 
+Score:0.527859047658
+Matrix:8
+random forest
+100, 5, 
+Score:0.371976023782
+Matrix:8
+random forest
+100, 10, 
+Score:0.452833154911
+Matrix:8
+random forest
+100, 20, 
+Score:0.532258314844
+Matrix:8
+random forest
+200, 5, 
+Score:0.374543634167
+Matrix:8
+random forest
+200, 10, 
+Score:0.455147490355
+Matrix:8
+random forest
+200, 20, 
+Score:0.533289622626
+Matrix:9
+logistic regression
+0.1, l1, 
+Score:0.697743392515
+Matrix:9
+logistic regression
+0.1, l2, 
+Score:0.740183029829
+Matrix:9
+logistic regression
+0.5, l1, 
+Score:0.759517135368
+Matrix:9
+logistic regression
+0.5, l2, 
+Score:0.767185024867
+Matrix:9
+logistic regression
+1.0, l1, 
+Score:0.767889658104
+Matrix:9
+logistic regression
+1.0, l2, 
+Score:0.772565819069
+Matrix:9
+logistic regression
+2.0, l1, 
+Score:0.768217277454
+Matrix:9
+logistic regression
+2.0, l2, 
+Score:0.772063034219
+Matrix:9
+random forest
+25, 5, 
+Score:0.372131346176
+Matrix:9
+random forest
+25, 10, 
+Score:0.449518412373
+Matrix:9
+random forest
+25, 20, 
+Score:0.531881381911
+Matrix:9
+random forest
+100, 5, 
+Score:0.377033092185
+Matrix:9
+random forest
+100, 10, 
+Score:0.454619409823
+Matrix:9
+random forest
+100, 20, 
+Score:0.53421928048
+Matrix:9
+random forest
+200, 5, 
+Score:0.38208237894
+Matrix:9
+random forest
+200, 10, 
+Score:0.451223941935
+Matrix:9
+random forest
+200, 20, 
+Score:0.534446040222
+Matrix:10
+logistic regression
+0.1, l1, 
+Score:0.697718238446
+Matrix:10
+logistic regression
+0.1, l2, 
+Score:0.742093870135
+Matrix:10
+logistic regression
+0.5, l1, 
+Score:0.761553569229
+Matrix:10
+logistic regression
+0.5, l2, 
+Score:0.772490066225
+Matrix:10
+logistic regression
+1.0, l1, 
+Score:0.770956676112
+Matrix:10
+logistic regression
+1.0, l2, 
+Score:0.7782229388
+Matrix:10
+logistic regression
+2.0, l1, 
+Score:0.773772930397
+Matrix:10
+logistic regression
+2.0, l2, 
+Score:0.778650222538
+Matrix:10
+random forest
+25, 5, 
+Score:0.341299152748
+Matrix:10
+random forest
+25, 10, 
+Score:0.424297328159
+Matrix:10
+random forest
+25, 20, 
+Score:0.512521208953
+Matrix:10
+random forest
+100, 5, 
+Score:0.347315670134
+Matrix:10
+random forest
+100, 10, 
+Score:0.431893770802
+Matrix:10
+random forest
+100, 20, 
+Score:0.516545092055
+Matrix:10
+random forest
+200, 5, 
+Score:0.345454099777
+Matrix:10
+random forest
+200, 10, 
+Score:0.431791558352
+Matrix:10
+random forest
+200, 20, 
+Score:0.519814334382
