@@ -115,7 +115,7 @@ def record_run(matrix, matrix_index, y_true, alg, alg_name, params):
 
 
 def main():
-    csr_sparse_ing, csr_filtered_ing = load_or_create_matrices()
+    csr_sparse_ing, csr_filtered_ings = load_or_create_matrices()
 
     cuisine_mapping = get_cuisine_int_mapping()  # Keep the mapping so we can reconstruct them later if we want
 
@@ -127,8 +127,7 @@ def main():
 
     rand_fors = get_rand_fors()
 
-    matrices = copy.deepcopy(csr_filtered_ing)
-    matrices.append(csr_sparse_ing)
+    matrices = csr_filtered_ings + [csr_sparse_ing]
 
     for mat_indx, matrix in enumerate(matrices):
         for alg_data in log_regs:
